@@ -1,0 +1,23 @@
+# Copiar a ~/video-studio/config.toml. Todo es opcional: sin archivo se usan estos valores.
+zona_horaria = "UTC"  # la tuya: "America/Bogota", "Europe/Madrid"...
+segundos_por_defecto = 75  # 75/90 pasan del minuto (monetizables); en Telegram: /largo
+noticia_vieja_dias = 7
+
+[gpu]
+# "inactivo": genera cuando el Qwen lleva `inactividad_min` sin uso (metricas del servidor y `sesiones_app`).
+# "inmediato": apaga el Qwen apenas haya algo aprobado. En Telegram: /politica y /ya.
+politica = "inactivo"
+inactividad_min = 15
+max_turno_min = 75
+aviso_espera_h = 6
+
+[voz]
+motor = "chatterbox" # espanol latino; "qwen3" | "ninguna" (reels sin narracion)
+exageracion = 0.5    # 0.7 + cfg_ritmo 0.3 = lectura mas enfatica
+cfg_ritmo = 0.5
+dispositivo = "cpu"  # la voz se genera ANTES del turno de GPU, asi no alarga el tiempo sin Qwen
+
+[montaje]
+marca_texto = ""     # p. ej. el nombre de la pagina; vacio = sin firma
+volumen_musica = 0.12
+minimo_monetizable_s = 62  # piso de los reels de 60 s o mas

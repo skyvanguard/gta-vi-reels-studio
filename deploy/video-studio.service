@@ -1,0 +1,22 @@
+[Unit]
+Description=GTA VI Reels Studio (bot de Telegram + cola de reels; turnos de GPU con el LLM local)
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/video-studio/app
+ExecStart=%h/video-studio/app/.venv/bin/python -m vstudio bot
+# si el proceso muere con un turno de GPU abierto, devuelve el Qwen (qwen.sh start puede esperar 6 min)
+ExecStopPost=%h/video-studio/app/scripts/restaurar.sh
+Restart=on-failure
+RestartSec=20
+TimeoutStopSec=600
+Environment=PYTHONUNBUFFERED=1
+UMask=0077
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=full
+
+[Install]
+WantedBy=default.target

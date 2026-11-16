@@ -1,0 +1,24 @@
+[project]
+name = "gta-vi-reels-studio"
+version = "0.1.0"
+readme = "README.md"
+description = "Reels de noticias de GTA VI generados en tu propio servidor (Qwen + Wan 2.2 + Chatterbox + FFmpeg), manejados por Telegram"
+requires-python = ">=3.12"
+dependencies = [
+  "httpx>=0.27",
+  "pillow>=10.4",
+  "trafilatura>=2.0",
+  "lxml>=5.0",
+  "spylls>=0.1.7",  # ortografia con el diccionario hunspell-es (assets/diccionario)
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools]
+packages = ["vstudio"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# spylls (ortografia) instala un paquete "tests" propio en site-packages: el del proyecto va primero
+pythonpath = ["."]

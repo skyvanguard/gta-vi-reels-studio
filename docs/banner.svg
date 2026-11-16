@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" width="1280" height="360" role="img" aria-label="GTA VI Reels Studio: de una noticia a un reel vertical, en tu propio servidor">
+  <defs>
+    <linearGradient id="cielo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b0b3a"/>
+      <stop offset="0.45" stop-color="#5a1466"/>
+      <stop offset="0.8" stop-color="#d6336c"/>
+      <stop offset="1" stop-color="#ff8a3d"/>
+    </linearGradient>
+    <linearGradient id="pantalla" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffb347"/>
+      <stop offset="0.55" stop-color="#ff5c8a"/>
+      <stop offset="1" stop-color="#3b1a6e"/>
+    </linearGradient>
+    <linearGradient id="brillo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="sol"><circle cx="1120" cy="330" r="210"/></clipPath>
+    <clipPath id="recorte"><rect x="0" y="0" width="1280" height="360" rx="22"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#recorte)">
+    <rect width="1280" height="360" fill="url(#cielo)"/>
+    <rect width="1280" height="170" fill="url(#brillo)"/>
+    <!-- franjas de sol al fondo -->
+    <g opacity="0.22" fill="#ffd166">
+      <circle cx="1120" cy="330" r="210"/>
+    </g>
+    <g fill="#1b0b3a" opacity="0.5" clip-path="url(#sol)">
+      <rect x="900" y="250" width="440" height="10"/>
+      <rect x="900" y="278" width="440" height="14"/>
+      <rect x="900" y="310" width="440" height="20"/>
+    </g>
+
+    <!-- el reel: un telefono vertical con escenas -->
+    <g transform="translate(86 44)">
+      <rect x="0" y="0" width="154" height="272" rx="24" fill="#12071f" stroke="#ffffff" stroke-opacity="0.85" stroke-width="3"/>
+      <rect x="11" y="13" width="132" height="246" rx="14" fill="url(#pantalla)"/>
+      <!-- barra de progreso por escenas -->
+      <g fill="#ffffff">
+        <rect x="19" y="22" width="26" height="4" rx="2"/>
+        <rect x="49" y="22" width="26" height="4" rx="2"/>
+        <rect x="79" y="22" width="26" height="4" rx="2" opacity="0.45"/>
+        <rect x="109" y="22" width="26" height="4" rx="2" opacity="0.45"/>
+      </g>
+      <!-- boton de reproducir -->
+      <circle cx="77" cy="124" r="34" fill="#12071f" fill-opacity="0.55" stroke="#ffffff" stroke-width="3"/>
+      <path d="M67 106 L67 142 L98 124 Z" fill="#ffffff"/>
+      <!-- titular y subtitulos -->
+      <rect x="22" y="188" width="110" height="13" rx="4" fill="#ffffff"/>
+      <rect x="22" y="208" width="78" height="13" rx="4" fill="#ffe14d"/>
+      <rect x="22" y="232" width="56" height="7" rx="3.5" fill="#ffffff" opacity="0.7"/>
+    </g>
+
+    <!-- titulo -->
+    <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" fill="#ffffff">
+      <text x="296" y="128" font-size="68" font-weight="800" letter-spacing="-1">GTA VI Reels Studio</text>
+      <text x="298" y="178" font-size="27" font-weight="400" opacity="0.95">De una noticia a un reel vertical, todo en tu propio servidor</text>
+    </g>
+
+    <!-- fichas de las piezas -->
+    <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="19" font-weight="600" fill="#ffffff">
+      <g transform="translate(298 220)">
+        <rect width="120" height="42" rx="21" fill="#12071f" fill-opacity="0.5" stroke="#ffffff" stroke-opacity="0.6"/>
+        <text x="60" y="27" text-anchor="middle">Telegram</text>
+      </g>
+      <g transform="translate(430 220)">
+        <rect width="118" height="42" rx="21" fill="#12071f" fill-opacity="0.5" stroke="#ffffff" stroke-opacity="0.6"/>
+        <text x="59" y="27" text-anchor="middle">LLM local</text>
+      </g>
+      <g transform="translate(560 220)">
+        <rect width="104" height="42" rx="21" fill="#12071f" fill-opacity="0.5" stroke="#ffffff" stroke-opacity="0.6"/>
+        <text x="52" y="27" text-anchor="middle">Wan 2.2</text>
+      </g>
+      <g transform="translate(676 220)">
+        <rect width="126" height="42" rx="21" fill="#12071f" fill-opacity="0.5" stroke="#ffffff" stroke-opacity="0.6"/>
+        <text x="63" y="27" text-anchor="middle">Chatterbox</text>
+      </g>
+      <g transform="translate(814 220)">
+        <rect width="100" height="42" rx="21" fill="#12071f" fill-opacity="0.5" stroke="#ffffff" stroke-opacity="0.6"/>
+        <text x="50" y="27" text-anchor="middle">FFmpeg</text>
+      </g>
+    </g>
+    <text x="298" y="304" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" fill="#ffffff" opacity="0.85">Sin APIs pagas · proyecto de fans, sin relación con Rockstar Games</text>
+  </g>
+</svg>
